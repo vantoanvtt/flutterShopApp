@@ -81,6 +81,7 @@ class _UserInfoState extends State<UserInfo> {
                     builder:
                         (BuildContext context, BoxConstraints constraints) {
                       top = constraints.biggest.height;
+                      debugPrint(top.toString());
                       return Container(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
@@ -300,7 +301,7 @@ class _UserInfoState extends State<UserInfo> {
     double scale = 1.0;
     if (_scrollController.hasClients) {
       double offset = _scrollController.offset;
-      print(offset);
+      //print(offset);
       top -= offset;
       if (offset < defaultTopMargin - scaleStart) {
         //offset small => don't scale down
